@@ -28,8 +28,26 @@ def selection_sort( arr ):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort( arr ):
+    # outer loopy
+    for i in range (len(arr)):
+        #inner loop over -1 because the last item should be already sorted
+        for j in range(len(arr) -1):
+            # compare the value of the iteration to the item to the right
+            if arr[j] > arr[j+1]:
+                # if item on left is bigger than item on right then swap
+                temp = arr[j]
+                arr[j] = arr[j+1]
+                arr[j+1] = temp
+
+
+
 
     return arr
+
+theList = [4,3,2,6,7,1,5,6]
+
+listsorter = bubble_sort(theList)
+print(listsorter)
 
 
 # STRETCH: implement the Count Sort function below
